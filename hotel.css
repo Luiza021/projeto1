@@ -1,0 +1,22 @@
+header{
+   color: rgb(102, 91, 76);
+   font-family: Arial, Helvetica, sans-serif;
+   text-align: center;
+   padding-top: 150px;
+}
+body{
+    background-image: url(img/hotel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.class{
+    text-align: center ;
+
+}
+
+.reservar{
+    font-style: oblique;
+    font-family: Arial, Helvetica, sans-serif;
+}
