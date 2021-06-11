@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="hotel.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
     <header>
-        <h1 class="exemplo">Hotel Gold</h1>
+        <h1 class="reservar">Hotel Gold</h1>
     </header>
 
     <main>
@@ -16,12 +20,51 @@
             <h2 id="quartos"></h2>
             <h2> Quartos Reservados </h2>
             <h2 id="vagas">25</h2>
-        <div>
-            <button class="reservar" onclick="btnReserva()"> reservar </button>
-        </div>
-            <script src="projet.js/hotel.js"></script>
+             
+            <div>
+                <br>
+                <button class="button" style="vertical-align:middle"onclick="btnReserva()"><span>Reservar </span></button>  
+            </div>
+        
+            <div> 
+                <form id="form-contato" class="formulario">
+                    <label for="nome"><strong>Nome Completo:</strong></label>
+                    <br>
+                    <br>
+                    <input type="text" id="nome" name="nome" required>
+                    <br>
+                    <br>
+                    <label for="cpf"><strong>CPF:</strong></label>
+                    <br>
+                    <br>
+                    <input type="text" id="cpf" name="cpf" required>
+                    <br>
+                    <br>
+                    <label for="nascimento"><strong> Data de Nascimento:</strong></label>
+                    <br>
+                    <br>
+                    <input type="date" id="nascimento" name="nascimento" required>
+                    <br>
+                    <br>
+                    <label for="tel"><strong>Telefone:</strong></label> 
+                    <br>
+                    <br>
+                    <input type="text" id="tel" name= "tel"required>
+                    <br>
+                    <br>
+                    <label for="email"><strong>Email:</strong></label>
+                    <br>
+                    <br>
+                    <input type="text" id="email" name="email" required>
+                    <br>
+                    <br>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div> 
+            
         </div>
 
     </main>
+    <script src="projet.js/hotel.js"></script>
 </body>
 </html>
