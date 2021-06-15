@@ -8,7 +8,7 @@ var hotel = {
   }
 };
 var subResultado = document.getElementById('quartos'); 
-subResultado.textContent += hotel.quartos;
+subResultado.textContent = hotel.quartos;
 
 
 

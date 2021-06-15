@@ -11,60 +11,76 @@
 
 <body>
     <header>
-        <h1 class="reservar">Hotel Gold</h1>
+        <h2 class="reservar">Hotel Gold</h2>
     </header>
 
-    <main>
+    <div id="formulario">
         <div class="class">
-            <h2> Quartos no Hotel </h2>
-            <h2 id="quartos"></h2>
-            <h2> Quartos Reservados </h2>
-            <h2 id="vagas">25</h2>
-             
-            <div>
-                <br>
-                <button class="button" style="vertical-align:middle"onclick="btnReserva()"><span>Reservar </span></button>  
-            </div>
-        
-            <div> 
-                <form id="form-contato" class="formulario">
-                    <label for="nome"><strong>Nome Completo:</strong></label>
-                    <br>
-                    <br>
-                    <input type="text" id="nome" name="nome" required>
-                    <br>
-                    <br>
-                    <label for="cpf"><strong>CPF:</strong></label>
-                    <br>
-                    <br>
-                    <input type="text" id="cpf" name="cpf" required>
-                    <br>
-                    <br>
-                    <label for="nascimento"><strong> Data de Nascimento:</strong></label>
-                    <br>
-                    <br>
-                    <input type="date" id="nascimento" name="nascimento" required>
-                    <br>
-                    <br>
-                    <label for="tel"><strong>Telefone:</strong></label> 
-                    <br>
-                    <br>
-                    <input type="text" id="tel" name= "tel"required>
-                    <br>
-                    <br>
-                    <label for="email"><strong>Email:</strong></label>
-                    <br>
-                    <br>
-                    <input type="text" id="email" name="email" required>
-                    <br>
-                    <br>
-                    <input type="submit" value="Enviar">
-                </form>
-            </div> 
-            
-        </div>
+            <strong> Quartos no Hotel: </strong>
 
-    </main>
+            <strong id="quartos"></strong>
+            <br>
+            <br>
+            <strong> Quartos Reservados: </strong>
+            </strong id="vagas">25 </strong>
+           
+                <form id="form-contato" class="form1">
+                    <div class="class1">
+                    <label for="suíte"><strong> Escolha sua suíte:</strong></label>
+                    <br>
+                    <br>
+                    <input type="radio" name="suíte" value="Modelo"> <strong>Master Superior</strong>
+                    <label for="radio"></label>
+                    <br>
+                    <br>
+                    <input type="radio" name="suíte" value="Modelo"> <strong>Master</strong>
+                    <br>
+                    <br>
+                    <input type="radio" name="suíte" value="Modelo"> <strong>Standard</strong>
+                    <br>
+                    <br>
+            </div>
+            <div class="class2">
+
+                <label for="nome"><strong>Nome:</strong></label>
+                <br>
+                <br>
+                <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+                <br>
+                <br>
+                <label for="cpf"><strong>CPF:</strong></label>
+                <br>
+                <br>
+                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                <br>
+                <br>
+                <label for="nascimento"><strong> Data de Nascimento:</strong></label>
+                <br>
+                <br>
+                <input type="date" id="nascimento" name="nascimento" required>
+                <br>
+                <br>
+                <label for="tel"><strong>Telefone:</strong></label>
+                <br>
+                <br>
+                <input type="text" id="tel" name="tel" placeholder="(xx) 9xxxx-xxxx" required>
+                <br>
+                <br>
+                <label for="email"><strong>Email:</strong></label>
+                <br>
+                <br>
+                <input type="text" id="email" name="email" placeholder="nome@endereço.com" required>
+                <br>
+                </form>
+            </div>
+            <br>
+            <br>
+            <button class="button" style="vertical-align:middle" onclick="btnReserva()"><span>Reservar
+                </span></button>
+        </div>
+    </div>
+
     <script src="projet.js/hotel.js"></script>
 </body>
+
 </html>

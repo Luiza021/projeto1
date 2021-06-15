@@ -19,8 +19,9 @@ body{
 .class{
     text-align: center ;
     background-color: white; 
-    width: 200px;
-    margin: auto;
+    width: 50%;
+    margin-left:0;
+    border-radius: 3cm;
 
 }
 
@@ -37,7 +38,7 @@ body{
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 28px;
+    font-size: 25px;
     padding: 20px;
     width: 180px;
     transition: all 0.5s;
@@ -68,4 +69,13 @@ body{
   .button:hover span:after {
     opacity: 1;
     right: 0;
+  }
+
+  .form1{
+    margin-left: 0px;
+    left: 0px;
+  }
+  .form2{
+    margin-right: 0px;
+    
   }
