@@ -15,36 +15,50 @@ body{
     background-size: cover;
 
 }
+.class1{
+  background-color: white; 
+  width: 300px;
+  height: 100px;
+  margin: auto;
+  border-radius:3cm;
+  text-align:  ;
 
+}
+.tex {
+  top: 5cm;
+  text-align: center;
+}
 .class{
-    text-align: center ;
     background-color: white; 
-    width: 50%;
-    margin-left:0;
+    width: 1000px;
+    height: 400px;
+    
+    margin: auto;
     border-radius: 3cm;
+
 
 }
 
-.reservar{
+.titulo{
     font-size: 25px;
     font-family: Calibri;
     width: 200px;
     font-family: 'Bungee Inline', cursive;
 }
 .button {
-    display: inline-block;
-    border-radius: 4px;
-    background-color: #bba199;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 25px;
-    padding: 20px;
-    width: 180px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-  }
+  display: inline-block;
+  border-radius: 1cm;
+  background-color: #bba199;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 25px;
+  padding: 2%;
+  width: 180px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin:auto;
+}
   
   .button span {
     cursor: pointer;
@@ -71,11 +85,16 @@ body{
     right: 0;
   }
 
-  .form1{
-    margin-left: 0px;
-    left: 0px;
-  }
   .form2{
-    margin-right: 0px;
+    top: 20px;
+    width: 50%;
+    margin-left: 587px;
+    margin-top: -60px;
+  }
+  .form1{
+    top: 20px;
+    width: 50%;
+    margin-left: 200px;
+    position: relative;
     
   }

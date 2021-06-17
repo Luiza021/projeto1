@@ -11,36 +11,41 @@
 
 <body>
     <header>
-        <h2 class="reservar">Hotel Gold</h2>
+        <h2 class="titulo">Hotel Gold</h2>
     </header>
-
-    <div id="formulario">
-        <div class="class">
+    <br><br>
+    <div class="class1">
+        <div class="tex">
             <strong> Quartos no Hotel: </strong>
-
             <strong id="quartos"></strong>
             <br>
             <br>
+            
             <strong> Quartos Reservados: </strong>
             </strong id="vagas">25 </strong>
-           
-                <form id="form-contato" class="form1">
-                    <div class="class1">
+           <br>
+           <br>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div id="quadradao" class="class">
+        
+                <form>
+                    <div id="quadrado1"class="form1">
                     <label for="suíte"><strong> Escolha sua suíte:</strong></label>
                     <br>
                     <br>
                     <input type="radio" name="suíte" value="Modelo"> <strong>Master Superior</strong>
                     <label for="radio"></label>
-                    <br>
-                    <br>
                     <input type="radio" name="suíte" value="Modelo"> <strong>Master</strong>
-                    <br>
-                    <br>
                     <input type="radio" name="suíte" value="Modelo"> <strong>Standard</strong>
                     <br>
                     <br>
             </div>
-            <div class="class2">
+            <div id = "quadrado2" class="form2">
 
                 <label for="nome"><strong>Nome:</strong></label>
                 <br>
@@ -75,10 +80,11 @@
             </div>
             <br>
             <br>
-            <button class="button" style="vertical-align:middle" onclick="btnReserva()"><span>Reservar
-                </span></button>
+
         </div>
-    </div>
+        <button class="button" style="vertical-align:middle" onclick="btnReserva()"><span>Reservar
+        </span></button>
+
 
     <script src="projet.js/hotel.js"></script>
 </body>
