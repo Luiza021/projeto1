@@ -1,7 +1,7 @@
 <?php
  class Pessoa{
      private $idpessoa;
-     private $nome;
+     private $name;
      private $dtNasc;
      private $login;
      private $senha;
@@ -23,14 +23,14 @@
           return $this;
      }
     
-     public function getNome()
+     public function getName()
      {
-          return $this->nome;
+          return $this->name;
      }
 
-     public function setNome($nome)
+     public function setName($name)
      {
-          $this->nome = $nome;
+          $this->nome = $name;
 
           return $this;
      }
