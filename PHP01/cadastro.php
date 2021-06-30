@@ -79,7 +79,7 @@
     </div>
     <?php
         //envio dos dados para oBd
-     if (isset)($_POST['Cadastrar'])){
+     if (isset($_POST['Cadastrar'])){
         $nome = $_POST['nome'];
         $nome = $_POST['dtNasc'];
         $nome = $_POST['login'];
