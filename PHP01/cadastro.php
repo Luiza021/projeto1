@@ -80,7 +80,8 @@
     <?php
         //envio dos dados para oBd
      if (isset($_POST['Cadastrar'])){
-        $nome = $_POST['nome'];
+         include_once 'PessoaControler.php';
+        $name = $_POST['nome'];
         $nome = $_POST['dtNasc'];
         $nome = $_POST['login'];
         $nome = $_POST['senha'];
