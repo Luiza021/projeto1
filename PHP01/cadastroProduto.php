@@ -35,64 +35,50 @@
             </div>
         </div>
     </nav>
-    <div class="Card-header bg-light text-center">Cadastro de Cliente </div>
-    <div class="card-bory border">
+    <?php
+    //envio dos dados para o Bd
+    if (isset($_POST['CadastrarProduto'])) {
+        include_once 'controller/ProdutoController.php';
+        $nomeProduto = $_POST['nomeProduto'];
+        $vlrCompra = $_POST['vlrCompra'];
+        $vlrVenda = $_POST['vlrVenda'];
+        $qtdEstoque = $_POST['qtdEstoque'];
+
+        $pc = new ProdutoController();
+        echo "<p" . $pc->inserirProduto ($nomeProduto, $vlrCompra ,$vlrVenda, $qtdEstoque)."</p";
+    }
+    ?>
+        <div class="card-bory border">
         <form method="post" action="">
             <div class="row">
-                <div class="col-md 6">
+                <div class="col-md 6 offset-md-3">
                     <label>Código</label><br>
-                    <label>Nome Completo</label>
-                    <input class="form-control" type="text" name="nome">
-                    <label>Data de Nascimento</label>
-                    <input class="form-control" type="date" name="dtNasc">
-                    <label>Email</label>
-                    <input class="form-control" type="email" name="email">
-                    <label>CPF</label><br>
-                    <input class="form-control" type="text" name="cpf">
-                </div>
-                <div class="col-md 6">
-                    <label>Login</label>
-                    <input class="form-control" type="text" name="login">
-                    <label>Senha</label>
-                    <input class="form-control" type="password" name="senha">
-                    <label>Conf. Senha</label>
-                    <input class="form-control" type="password" name="senha2">
-                    <select name="perfil" class="form-control">
-                        <option>[--Selecione--]</option>
-                        <option>Cliente</option>
-                        <option>Funcionário</option>
-                    </select>
+                    <label>Produto:</label>
+                    <input class="form-control" type="text" name="nomeProduto">
+                    <label>Valor da Compra</label>
+                    <input class="form-control" type="date" name="vlrCompra">
+                    <label>Valoe de Venda</label>
+                    <input class="form-control" type="email" name="vlrVenda">
+                    <label>Quatidade de Estoque</label><br>
+                    <input class="form-control" type="text" name="qtdEstoque">
+                    <input type="submit" name="cadastrarProduto" class="btn btn-success btInput" value="Enviar">
+                    &nbsp;&nbsp;
 
+                    <input type="reset" class="btn btn-light btInput" value="Limpar">
                 </div>
+
             </div>
-        </form>
+    </div>
+    </form>
     </div>
 
     <div class="col-md-5 offset-md-5">
-    <input type="submit" name="cadastrar" class="btn btn-success btInput" value="Enviar">
-    &nbsp;&nbsp;
-        
-        <input type="reset" class="btn btn-light btInput" value="Limpar">
+
     </div>
     </div>
     </form>
     </div>
-    <?php
-        //envio dos dados para oBd
-     if (isset($_POST['Cadastrar'])){
-         include_once 'PessoaControler.php';
-        $name = $_POST['nome'];
-        $nome = $_POST['dtNasc'];
-        $nome = $_POST['login'];
-        $nome = $_POST['senha'];
-        $nome = $_POST['perfil'];
-        $nome = $_POST['cpf'];
-        $nome = $_POST['email'];
-        
-        $pc = new PessoaControler();
-        $pc->inserirPessoa($nome,$dtNasc,$login,$senha,$perfil,$email,$cpf);
-    }
-    ?>
+
     <link rel="styesheet" hrel="css/bootstrap.css">
     <link rel="styesheet" hrel="css/bootstrap.min.css">
 </body>
