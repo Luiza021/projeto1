@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
@@ -11,7 +10,6 @@
             margin-bottom: 20px;
         }
     </style>
-
     </meta>
 </head>
 
@@ -35,52 +33,88 @@
             </div>
         </div>
     </nav>
-    <?php
-    //envio dos dados para o Bd
-    if (isset($_POST['CadastrarProduto'])) {
-        include_once 'controller/ProdutoController.php';
-        $nomeProduto = $_POST['nomeProduto'];
-        $vlrCompra = $_POST['vlrCompra'];
-        $vlrVenda = $_POST['vlrVenda'];
-        $qtdEstoque = $_POST['qtdEstoque'];
+           <thead>
+                    <th>Nomen/th>
+            <th>Compra (R$)</th>
+            <th>Venda (R$)</th>
+            <th>Estoque</th><tr
+            <th
 
-        $pc = new ProdutoController();
-        echo "<p" . $pc->inserirProduto ($nomeProduto, $vlrCompra ,$vlrVenda, $qtdEstoque)."</p";
-    }
-    ?>
-        <div class="card-bory border">
+        </thead>
+   <tbody>
+         <?php
+            $pdTabela = new ProdutoController();
+            $listaProduto = $pcTabela->listaProduto();
+             foreach($listaProdutos as $lp){
+                <td><?php print_r($lp->getIdProduto()); ?></td>;
+            print_r("<tr>" . $lp->getNomeProduto().['nome'] . "</td>");
+            print_r("<tr>" . $lp->getVlrCompra(). "</td>");
+            print_r("<tr>" . $lp->getVlrVenda(). "</td>");
+            print_r("<tr>" . $lp->getQtdEstoque() . "</td></tr>");
+            }
+        ?>
+   </tbody>
+    <div class="row" sytep
+     <?php
+                    //envio dos dados para o Bd
+                    if (isset($_POST['CadastrarProduto'])) {
+                        include_once 'controller/ProdutoController.php';
+                        $nomeProduto = $_POST['nomeProduto'];
+                        $vlrCompra = $_POST['vlrCompra'];
+                        $vlrVenda = $_POST['vlrVenda'];
+                        $qtdEstoque = $_POST['qtdEstoque'];
+
+                        $pc = new ProdutoController();
+                        echo "<p" . $pc->inserirProduto($nomeProduto, $vlrCompra, $vlrVenda, $qtdEstoque) . "</p";
+                    }
+                    ?> 
+                    <div class="card-bory border">
         <form method="post" action="">
             <div class="row">
                 <div class="col-md 6 offset-md-3">
                     <label>Código</label><br>
                     <label>Produto:</label>
                     <input class="form-control" type="text" name="nomeProduto">
-                    <label>Valor da Compra</label>
+                    <label>Valor da Compra:</label>
                     <input class="form-control" type="date" name="vlrCompra">
-                    <label>Valoe de Venda</label>
+                    <label>Valor de Venda:</label>
                     <input class="form-control" type="email" name="vlrVenda">
-                    <label>Quatidade de Estoque</label><br>
+                    <label>Quantidade de Estoque:</label><br>
                     <input class="form-control" type="text" name="qtdEstoque">
-                    <input type="submit" name="cadastrarProduto" class="btn btn-success btInput" value="Enviar">
+                    <input type="submit" name="cadastrarProduto" class="btn btn-success btInput" value="Editar">
                     &nbsp;&nbsp;
-
-                    <input type="reset" class="btn btn-light btInput" value="Limpar">
+                    <input type="reset" class="btn btn-light btInput" value="Excluir">
                 </div>
 
             </div>
-    </div>
-    </form>
-    </div>
 
-    <div class="col-md-5 offset-md-5">
-
+        </form>
     </div>
     </div>
-    </form>
     </div>
-
     <link rel="styesheet" hrel="css/bootstrap.css">
     <link rel="styesheet" hrel="css/bootstrap.min.css">
 </body>
 
 </html>
+?>
+<?php
+include_once 'C:/xampp/htdocs/projeto1/PHP01/model/Conecta.php';
+$conn = new Conecta();
+if ($conn->conectadb()) {
+    $sql = "select * from produto";
+    $query = mysqli_query($conn->conectadb(), $sql);
+    $lista = mysqli_fetch_array($query);
+    mysqli_close($conn->conectadb());
+    if ($lp) {
+        do {
+            print_r("<tr><th>" . $lp['codigo'] . "</td>");
+            print_r("<tr>" . $lp['nome'] . "</td>");
+            print_r("<tr>" . $lp['vlrCompra'] . "</td>");
+            print_r("<tr>" . $lp['vlrvenda'] . "</td>");
+            print_r("<tr>" . $lp['qtdEstoque'] . "</td></tr>");
+        } while ($lp = mysqli_fetch_array($query));
+    }
+}
+
+?>

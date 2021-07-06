@@ -5,12 +5,7 @@ class Conecta {
     private  static $password = "senac";
     private static $base = "dbphp01";
     public $db;
-
-    public function Luiza(){
-        $db = $this->conectadb;
-    }
-  
-    public function conectadb(){
+     public function conectadb(){
         $db=  mysqli_connect($this->getUrl(),$this->getPassword(),
         $this->getBase()) or die (mysqli_errno($db)); 
         return $db;

@@ -27,8 +27,28 @@ class daoProduto {
         mysqli_close($conn->conectadb());
         return $msg;
         
+        
+     //método para carregar lista de produtos de banco de dados//*
+        public function listarProdutosDAO(){ 
+            $conn = new Conecta();
+            if ($conn->conectadb()){
+                $sql= "select * from produto "
+                $query = mysql_query($conn->conectadb(),$sql);
+                $result = mysql_fetch_array($query);
+                $lista = array();
+                $a=0;
+                do{
+                    $produto= new Produto();
+                    $produto->setIdProduto($result['id']);
+                    $produto->setIdProduto($result['id']);
+                    $produto->setIdProduto($result['id']);
+                    $produto->setIdProduto($result['id']);
+                    $lista[$a]=$produto;
+                }
+            }
+               return $lista;
+            
+        }
+        
     }
-       
-    
 }
-?>
