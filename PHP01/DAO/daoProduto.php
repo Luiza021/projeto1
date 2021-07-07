@@ -3,7 +3,7 @@ include_once 'C:/xampp/htdocs/projeto1/PHP01/model/Conecta.php';
 include_once 'C:/xampp/htdocs/projeto1/PHP01/model/Produto.php';
 
 class daoProduto {
-
+    
     public function inserir(Produto $produto){
 
         $conn= new Conecta();
@@ -26,17 +26,17 @@ class daoProduto {
         }
         mysqli_close($conn->conectadb());
         return $msg;
-        
-        
+                
      //método para carregar lista de produtos de banco de dados//*
         public function listarProdutosDAO(){ 
-            $conn = new Conecta();
+            $conn = new Conecta2();
             if ($conn->conectadb()){
                 $sql= "select * from produto "
                 $query = mysql_query($conn->conectadb(),$sql);
                 $result = mysql_fetch_array($query);
                 $lista = array();
                 $a=0;
+                if ($result){}
                 do{
                     $produto= new Produto();
                     $produto->setIdProduto($result['id']);
@@ -44,11 +44,14 @@ class daoProduto {
                     $produto->setIdProduto($result['id']);
                     $produto->setIdProduto($result['id']);
                     $lista[$a]=$produto;
-                }
-            }
-               return $lista;
-            
-        }
+                    $lista[$a]=$produto                
+                    $a ++;
+                }while($result = mysql_fetch_array($conn->conectadb($query));
+                 mysqli_close($conn->conectadb());
+                return $lista;
+             }
         
+        }
     }
+
 }
