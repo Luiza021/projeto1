@@ -12,4 +12,5 @@ function inserir (Pessoa $p){
         $msg = "Erro na conexão com Banco de Dados!";
  mysqli_close($conn->conectdb());
  return $msg;
+}
 ?>
