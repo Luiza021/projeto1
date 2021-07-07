@@ -1,6 +1,6 @@
 <?php
- include_once 'C:\xampp\htdocs\projeto1\PHP01\CONT\LivroController';
- include_once 'C:\xampp\htdocs\projeto1\PHP01\DAO\daoLivro';
+ include_once 'C:/xampp/htdocs/projeto1/PHP01/model DB/LivroController';
+ include_once 'C:/xampp/htdocs/projeto1/PHP01/DAO/daoLivro';
 
     class LivroController{
         public function inserirLivro($idLivro,$titulo ,$autor,$editora,$qtdEstoque){

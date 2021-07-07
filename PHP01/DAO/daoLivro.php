@@ -1,5 +1,6 @@
 <?php
-include_once 'C:/xampp/htdocs/academia/PHP/model DB/livro.php';
+include_once 'C:/xampp/htdocs/projeto/PHP/model DB/livro.php';
+include_once ('C:/xampp/htdocs/projeto/PHP/model/livro.php');
 class daoLivro{
     
     public function inserir(Livro $l) {

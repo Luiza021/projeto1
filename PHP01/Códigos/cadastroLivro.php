@@ -1,19 +1,23 @@
 
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <title>LIVRO</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Teste</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
     <style>
-        .btinput {
-            padding-left: 10px 20px 10px 20px;
+        .espaco {
+            padding: 24px;
+        }
+
+        .btInput {
             margin-top: 20px;
-            margin-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
     </style>
-
-    </meta>
 </head>
 
 <body>
@@ -60,7 +64,7 @@
                     </form>
                     <?php
 
-                    include_once ('..projeto1\PHP01\CONT\livroControllers.php'); 
+                    include_once ('C:/xampp/htdocs/projeto/PHP01/CONT/LivroController.php'); 
 
                     //envio dos dados para o banco
                     if (isset($_POST['cadastrarLivro'])) {
