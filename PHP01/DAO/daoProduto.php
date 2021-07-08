@@ -52,6 +52,42 @@ class daoProduto {
              }
         
         }
+        //método para excluir produto na tabela produto
+        public function excluirProdutoDAO($id){
+            $conn=new Conecta();
+            $conn=$conn->conectadb();
+            if ($conecta){
+                $sql = "delete from produto where id='$id'";
+                mysqli_query($conecta,$sql);
+                header("Location:../cadastroProduto.php");
+                mysqli_close($conecta);
+                exit;
+            }else{
+                echo"<script>alert('Banco inoperante')</script>";
+                header("Location:../cadastroProduto.php");
+            }
+        
     }
-
+//método para pesqueisar os dados de produtos por id
+public function pesquisarPodrutoIdDAO($id){
+    $conn=new Conecta();
+    $conn=$conn->conectadb();
+    if ($conecta){
+        $sql = "Select* from produto where id='$id'";
+        $result=mysqli_query($conecta,$sql);
+        $linha=mysqli_fetch_array($result);
+        if ($linha){
+            do{
+                $produto->setIdProduto($linha[$id]);
+                $produto->setIdProduto($linha[$nomeproduto]);
+                $produto->setIdProduto($linha[$vlrCompra]);
+                $produto->setIdProduto($linha[$VlrVenda]);
+                $produto->setIdProduto($linha[$QtdEstoque]);
+            }while($linha= mysqli_fetch_acoss($result));
+        }
+        mysqli_close($conecta);
+    }else{
+        echo"<script>alert('Banco inoperante!')</script>";
+        echo"<Meta http-equiv='refresh' content=/"0;
+        URL='http:'../Código/cadastroProduto.php'\">";
 }

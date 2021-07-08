@@ -1,6 +1,10 @@
 <?php
+<<<<<<< HEAD
+include_once 'C:/xampp/htdocs/projeto1/PHP/model DB/livro.php';
+=======
 include_once 'C:/xampp/htdocs/projeto/PHP/model DB/livro.php';
 include_once ('C:/xampp/htdocs/projeto/PHP/model/livro.php');
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
 class daoLivro{
     
     public function inserir(Livro $l) {

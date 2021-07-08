@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+<?php
+include_once '../CONT/LivroController.php'; 
+?>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+     
+        .espaco {
+            padding: 10px;
+        }
+        .btinput {
+            padding-left: 10px 20px 10px 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    </meta>
+=======
 
 <html lang="pt-br">
 
@@ -18,6 +43,7 @@
             padding-right: 10px;
         }
     </style>
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
 </head>
 
 <body>
@@ -40,6 +66,12 @@
             </div>
         </div>
     </nav>
+<<<<<<< HEAD
+     <div class="container-fluid ">
+        <div class="row" style="margin-top: 45px;">
+            <div class="col-8 offset-2">
+=======
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
 <div class="card-header bg-light text-center">
                     Cadastro do Livro
                 </div>
@@ -61,10 +93,18 @@
                                 <input type="reset" class="btn btn-danger btInput" value="Limpar">
                             </div>
                         </div>
+<<<<<<< HEAD
+                     
+                    </form>
+                    <?php
+
+                    
+=======
                     </form>
                     <?php
 
                     include_once ('C:/xampp/htdocs/projeto/PHP01/CONT/LivroController.php'); 
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
 
                     //envio dos dados para o banco
                     if (isset($_POST['cadastrarLivro'])) {
@@ -77,6 +117,43 @@
                     }
                     ?>
                 </div>
+<<<<<<< HEAD
+                <table class="table">
+                    <thead class="thead-dark bg-dark text-white">
+                        <tr>
+                            <th scope="col">Codigo</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Compra (R$)</th>
+                            <th scope="col">Venda (R$)</th>
+                            <th scope="col">Estoque</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $pcTable = new LivroController();
+                        $listarLivro= $pcTable->listarLivro();
+
+                        foreach ($listarLivro as $lp) {
+
+                        ?>
+                            <tr>
+                                <td><?php print_r($lp->getIdLivro()); ?></td>
+                                <td><?php print_r($lp->getTitulo()); ?></td>
+                                <td><?php print_r($lp->getAutor()); ?></td>
+                                <td><?php print_r($lp->getEditora()); ?></td>
+                                <td><?php print_r($lp->getQtdEstoque()); ?></td>
+                                <td><a class="btn btn-outline-dark" href="#">Editar</a>
+                                    <a class="btn btn-outline-danger" href="#">Excluir</a>
+                                </td>
+                            </tr>
+
+                        <?php
+                        }
+
+                        ?>
+=======
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
             </div>
         </div>
     </div>
