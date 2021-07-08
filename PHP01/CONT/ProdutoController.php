@@ -18,5 +18,8 @@ class ProdutoController{
   public function listarProdutos(){
       $daoProduto = new daoProduto();
       return $daoProduto ->listarProdutoDAO();
-      
+      //método para editarProduto
+      public function editarProduto($id){
+            
+      }
 ?>
