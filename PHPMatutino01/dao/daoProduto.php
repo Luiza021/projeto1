@@ -54,6 +54,7 @@ class DaoProduto {
             return $lista;
         }
     }
+<<<<<<< HEAD
     
     //método para excluir produto na tabela produto
     public function excluirProdutoDAO($id){
@@ -98,4 +99,6 @@ class DaoProduto {
         }
         return $produto;
     }
+=======
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
 }

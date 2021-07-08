@@ -1,7 +1,10 @@
 <?php
 include_once 'controller/ProdutoController.php';
+<<<<<<< HEAD
 include_once './model/Produto.php';
 $pr = new Produto();
+=======
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,9 +19,12 @@ $pr = new Produto();
                 margin-top: 20px;
                 margin-bottom: 20px;
             }
+<<<<<<< HEAD
             .pad15{
                 padding-bottom: 15px; padding-top: 15px;
             }
+=======
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
         </style>
     </head>
     <body>
@@ -56,9 +62,17 @@ $pr = new Produto();
 
         <div class="container-fluid">
             <div class="row" style="margin-top: 30px;">
+<<<<<<< HEAD
                 <div class="col-md-4">
                     <div class="card-header bg-dark text-center border
                          text-white"><strong>Cadastro de Produto</strong>
+=======
+                <div class="col-8 offset-2">
+
+                    <div class="card-header bg-light text-center border"
+                         style="padding-bottom: 15px; padding-top: 15px;">
+                        Cadastro de Produto
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
                     </div>
                     <div class="card-body border">
                         <?php
@@ -77,6 +91,7 @@ $pr = new Produto();
                                     URL='cadastroProduto.php'\">";
                             }
                         }
+<<<<<<< HEAD
                         if(isset($_POST['limpar'])){
                             $pc2 = new ProdutoController();
                             $pr = $pc2->limpar();
@@ -112,11 +127,36 @@ $pr = new Produto();
                                     &nbsp;&nbsp;
                                     <input type="submit" 
                                            class="btn btn-light btInput" name="limpar" value="Limpar">
+=======
+                        ?>
+                        <form method="post" action="">
+                            <div class="row">
+                                <div class="col-md-6 offset-md-3">
+                                    <label>Código: </label> <br> 
+                                    <label>Produto</label>  
+                                    <input class="form-control" type="text" 
+                                           name="nomeProduto">
+                                    <label>Valor de Compra</label>  
+                                    <input class="form-control" type="text" 
+                                           name="vlrCompra">  
+                                    <label>Valor de Venda</label>  
+                                    <input class="form-control" type="text" 
+                                           name="vlrVenda"> 
+                                    <label>Qtde em Estoque</label>  
+                                    <input class="form-control" type="number" 
+                                           name="qtdEstoque">
+                                    <input type="submit" name="cadastrarProduto"
+                                           class="btn btn-success btInput" value="Enviar">
+                                    &nbsp;&nbsp;
+                                    <input type="reset" 
+                                           class="btn btn-light btInput" value="Limpar">
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
                                 </div>
                         </form>
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-12">
@@ -188,17 +228,86 @@ $pr = new Produto();
                     </div>
                 </div>
             </div>
+=======
+        </div>
+        <div class="row" style="margin-top: 30px;">
+            <table class="table table-striped table-responsive">
+                <thead class="table-dark">
+                    <tr><th>Código</th>
+                        <th>Nome</th>
+                        <th>Compra (R$)</th>
+                        <th>Venda (R$)</th>
+                        <th>Estoque</th>
+                        <th>Ações</th></tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $pcTable = new ProdutoController();
+                    $listaProdutos = $pcTable->listarProdutos();
+                    $a = 0;
+                    if ($listaProdutos != null) {
+                        foreach ($listaProdutos as $lp) {
+                            $a++;
+                            ?>
+                            <tr>
+                                <td><?php print_r($lp->getIdProduto()); ?></td>
+                                <td><?php print_r($lp->getNomeProduto()); ?></td>
+                                <td><?php print_r($lp->getVlrCompra()); ?></td>
+                                <td><?php print_r($lp->getVlrVenda()); ?></td>
+                                <td><?php print_r($lp->getQtdEstoque()); ?></td>
+                                <td><a class="btn btn-light" 
+                                       href="#?id=<?php echo $lp->getIdProduto(); ?>">
+                                        <img src="img/edita.png" width="32"></a>
+                                    <button type="button" 
+                                            class="btn btn-light" data-bs-toggle="modal" 
+                                            data-bs-target="#exampleModal<?php echo $a;?>">
+                                        <img src="img/delete.png" width="32"></button></td>
+                            </tr>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal<?php echo $a;?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Contexto....<?php echo $lp->getIdProduto(); ?>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Sim</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <?php
+                    }
+                }
+                ?>
+                </tbody>
+            </table>
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
         </div>     
     </div>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
+<<<<<<< HEAD
         var myModal = document.getElementById('myModal')
         var myInput = document.getElementById('myInput')
 
         myModal.addEventListener('shown.bs.modal', function () {
             myInput.focus()
         })
+=======
+            var myModal = document.getElementById('myModal')
+            var myInput = document.getElementById('myInput')
+
+            myModal.addEventListener('shown.bs.modal', function () {
+                myInput.focus()
+            })
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
     </script> 
 </body>
 </html>

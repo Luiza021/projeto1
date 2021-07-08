@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 include_once '../CONT/LivroController.php'; 
 ?>
@@ -21,6 +22,28 @@ include_once '../CONT/LivroController.php';
     </style>
 
     </meta>
+=======
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        .espaco {
+            padding: 24px;
+        }
+
+        .btInput {
+            margin-top: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
 </head>
 
 <body>
@@ -43,9 +66,12 @@ include_once '../CONT/LivroController.php';
             </div>
         </div>
     </nav>
+<<<<<<< HEAD
      <div class="container-fluid ">
         <div class="row" style="margin-top: 45px;">
             <div class="col-8 offset-2">
+=======
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
 <div class="card-header bg-light text-center">
                     Cadastro do Livro
                 </div>
@@ -67,11 +93,18 @@ include_once '../CONT/LivroController.php';
                                 <input type="reset" class="btn btn-danger btInput" value="Limpar">
                             </div>
                         </div>
+<<<<<<< HEAD
                      
                     </form>
                     <?php
 
                     
+=======
+                    </form>
+                    <?php
+
+                    include_once ('C:/xampp/htdocs/projeto/PHP01/CONT/LivroController.php'); 
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
 
                     //envio dos dados para o banco
                     if (isset($_POST['cadastrarLivro'])) {
@@ -84,6 +117,7 @@ include_once '../CONT/LivroController.php';
                     }
                     ?>
                 </div>
+<<<<<<< HEAD
                 <table class="table">
                     <thead class="thead-dark bg-dark text-white">
                         <tr>
@@ -118,6 +152,8 @@ include_once '../CONT/LivroController.php';
                         }
 
                         ?>
+=======
+>>>>>>> d030f1ba82ce386acbc0a96bee2d0ab480f219ae
             </div>
         </div>
     </div>
